@@ -1,5 +1,7 @@
 name: Release Build
-on: [release]
+on:
+  push:
+    tags: ['*']
 
 jobs:
   build-upload:
@@ -19,4 +21,3 @@ jobs:
         with:
           file: build/libs/java-main-echo-*.jar
           file_glob: true
-
