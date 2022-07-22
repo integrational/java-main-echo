@@ -14,3 +14,5 @@ jobs:
           distribution: 'adopt'
       - name: Build with project's Gradle wrapper
         run: ./gradlew clean build
+      - name: Run under this JDK
+        run: java -jar build/libs/*.jar one 2 333
